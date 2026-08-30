@@ -2,6 +2,7 @@ import os
 import joblib
 import pandas as pd
 import streamlit as st
+import xgboost
 
 @st.cache_resource
 def load_model():
