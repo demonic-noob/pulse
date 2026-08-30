@@ -1,10 +1,12 @@
+import os
 import joblib
 import pandas as pd
 import streamlit as st
 
 @st.cache_resource
 def load_model():
-    return joblib.load("model_mars_storm.pkl")
+    model_path = os.path.join(os.path.dirname(__file__), "model_mars_storm.pkl")
+    return joblib.load(model_path)
 
 model = load_model()
 
